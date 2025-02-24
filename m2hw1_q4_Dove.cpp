@@ -15,6 +15,12 @@ int main() {
     cheerOne = letsGo + " " + school;
     cheerTwo = letsGo + " " + team;
 
+    // output cheer
+    cout << cheerOne << endl;
+    cout << cheerOne << endl;
+    cout << cheerOne << endl;
+    cout << cheerTwo << endl;
+
 
     return 0;
 }
