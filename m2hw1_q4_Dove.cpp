@@ -1,5 +1,5 @@
 // CSC 134
-// M2HW1 Q3
+// M2HW1 Q4
 // Hayley Dove
 // 02/23/2025
 
@@ -14,7 +14,7 @@ int main() {
     team = "Trojans";
     cheerOne = letsGo + " " + school;
     cheerTwo = letsGo + " " + team;
-    
+
 
     return 0;
 }
