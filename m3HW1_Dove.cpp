@@ -2,6 +2,7 @@
 // m3HW1
 // Hayley Dove
 // 03/09/2025
+// Gold
 
 #include <iostream>
 #include <iomanip>
