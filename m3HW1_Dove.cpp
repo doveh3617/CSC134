@@ -6,8 +6,8 @@
 #include <iostream>
 using namespace std;
 
-void chooseFire;
-void chooseSwim;
+void chooseFire();
+void chooseSwim();
 
 int main() {
 
@@ -75,13 +75,47 @@ int main() {
     // Question 3
     int option;
     cout << "Question 3" << endl;
-    cout << "You are stranded on a deserted island, you can either build a fire or go for a swim." << endl;
+    cout << "You are stranded on a seemingly deserted island, you can either build a fire or go for a swim." << endl;
     cout << "Which option will you choose? Please use 1 for fire or 2 for swim." << endl;
     cin >> option;
 
-    
+    if (option == 1) {
+        chooseFire();
+    }
+    else if (option == 2) {
+        chooseSwim();
+    }
+    else{
+        cout << "That isn't a valid option, you lose." << endl;
+    }
+
+    cout << "Thank you for playing!" << endl;
 
 
   return 0;
 
+}
+
+void chooseFire() {
+    int pick;
+    cout << "You have chosen to build a fire." << endl;
+    cout << "Great job! You survived the night." << endl;
+    cout << "Now you must decide if you would rather go hunting for food or search for civilization." << endl;
+    cout << "Choose 1 for hunting and 2 for searching." << endl;
+    cin >> pick;
+    
+    if (pick == 1){
+        cout << "While hunting for food, a pack of wild monkeys attacked you." << endl;
+        cout << "You're dead, game over." << endl;
+    }
+    else if (pick == 2) {
+        cout << "While searching for civilization, you came across a local tribe that took you in and taught you how to survive" << endl;
+        cout << "Congratulations! You win the game!" << endl;
+    }
+}
+
+void chooseSwim() {
+    cout << "You having chosen to go for a swim." << endl;
+    cout << "While swimming, you were attacked by a group of hungry sharks." << endl;
+    cout << "You're dead, Game Over." << endl;
 }
