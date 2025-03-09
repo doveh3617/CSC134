@@ -4,6 +4,8 @@
 // 03/09/2025
 
 #include <iostream>
+#include <iomanip>
+#include<cstdlib>
 using namespace std;
 
 void chooseFire();
@@ -28,6 +30,7 @@ int main() {
     else {
         cout << "This wasn't a choice given, I understand if you feel indifferent about me." << endl;
     }
+    cout << "" << endl;
 
     // Question 2
     int decision;
@@ -53,24 +56,22 @@ int main() {
         tipAmt = price * TIP;
         total = totalWithTax + tipAmt;
 
-        cout << "Your meal price was: $" << price << endl;
-        cout << "Your tax amount was: $" << taxAmt << endl;
-        cout << "Your tip amount was: $" << tipAmt << endl;
-        cout << "Your total amount was: $" << total << endl;
-
     }
     else if (decision == 2) {
         tipAmt = 0;
         taxAmt = price * TAX;
         total = price * taxAmt;
-        cout << "Your meal price was: $" << price << endl;
-        cout << "Your tax amount was: $" << taxAmt << endl;
-        cout << "Your tip amount was: $" << tipAmt << endl;
-        cout << "Your total amount was: $" << total << endl;
     }
     else {
         cout << "That is not a valid choice." << endl;
     }
+
+    cout << setprecision(2) << fixed;
+    cout << "Your meal price was: $" << price << endl;
+    cout << "Your tax amount was: $" << taxAmt << endl;
+    cout << "Your tip amount was: $" << tipAmt << endl;
+    cout << "Your total amount was: $" << total << endl;
+    cout << "" << endl;
 
     // Question 3
     int option;
@@ -90,6 +91,25 @@ int main() {
     }
 
     cout << "Thank you for playing!" << endl;
+    cout << "" << endl; 
+
+    // Question 4
+    srand((unsigned) time(NULL));
+    int random1 = rand() % 10;
+    int random2 = rand() % 10;
+    int answer = random1 + random2;
+    int userAnswer;
+
+    cout << "Question 4" << endl;
+    cout << "What is " << random1 << " plus " << random2 << "?" << endl;
+    cin >> userAnswer;
+
+    if (userAnswer == answer){
+        cout << "Correct! Great job!" << endl;
+    }
+    else {
+        cout << "Incorrect answer. The correct answer is " << answer << endl;
+    }
 
 
   return 0;
