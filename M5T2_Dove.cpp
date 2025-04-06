@@ -6,12 +6,16 @@
 #include <iostream>
 using namespace std;
 
-void printResult(int first, int second) {
+void printAnswer(int first, int second) {
     cout << first << " squared = " << second << endl;
 
 }
 
-
+int square(int number) {
+    int result;
+    result = number * number;
+    return result;
+}
 
 int main()
 {
@@ -19,8 +23,8 @@ int main()
     int result;
 
     while (count <= 10) {
-        result = count * count;
-        printResult(count, result);
+        result = square(count);
+        printAnswer(count, result);
         count++;
     }
     
