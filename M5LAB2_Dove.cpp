@@ -1,5 +1,7 @@
 // M5LAB2
-// Header goes here
+// CSC 134
+// Hayley Dove
+// 04/12/2025
 
 #include <iostream>
 using namespace std;
