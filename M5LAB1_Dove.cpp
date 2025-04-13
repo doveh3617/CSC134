@@ -12,7 +12,7 @@ void choice_front_door();
 void choice_back_door();
 void choice_go_home();
 void choice_secret_path();
-// TODO: add more choices here
+
 
 int main() {
   cout << "M5LAB1 - Choose Your Own Adventure" << endl;
