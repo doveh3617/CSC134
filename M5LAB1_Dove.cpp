@@ -1,29 +1,20 @@
+
+
+
+// CSC 134
+//M5LAB1 - Choose Your Own Adventure
+// Hayley Dove
+// 04/12/2025
+
+
 #include <iostream>
 using namespace std;
 
-/*
-CSC 134
-M5LAB1 - Choose Your Own Adventure
-[name]
-[date]
-This template serves as a starting point
-for your own program. We'll be using
-void functions to tell a simple story,
-where the user gets to make choices.
-
-You can fork this template by clicking on the name above, then click the three
-dots on the top right, and click 'fork repl'. This makes a copy for you to use.
-*/
-
-// Function Prototypes
-// Any functions you make will need to
-// be listed here, in this format, at the top.
-// This is so the compiler knows to save
-// room for them in the final program.
 void main_menu();
 void choice_front_door();
 void choice_back_door();
 void choice_go_home();
+void choice_secret_path();
 // TODO: add more choices here
 
 int main() {
@@ -43,17 +34,20 @@ void main_menu() {
   cout << "1. Try the front door" << endl;
   cout << "2. Sneak around back" << endl;
   cout << "3. Forget it, and go home" << endl;
-  cout << "4. [Quit]" << endl;
+  cout << "4. Check out the secret path next to the house" << endl;
+  cout << "5. [Quit]" << endl;
   cout << "Choose: ";
   int choice;
   cin >> choice;
   if (1 == choice) {
     choice_front_door();
   } else if (2 == choice) {
-    // call choice 2 here
+    choice_back_door();
   } else if (3 == choice) {
-    // call choice 3 here
+    choice_go_home();
   } else if (4 == choice) {
+    choice_secret_path();
+  } else if (5 == choice) {
     cout << "Ok, quitting game" << endl;
     return; // go back to main()
   } else {
@@ -84,9 +78,60 @@ void choice_front_door() {
 }
 
 void choice_back_door() { 
-    cout << "TODO: Write something here" << endl; 
+    cout << "You sneak around to check the back of the house." << endl;
+    cout << "Do you:" << endl;
+    cout << "1. Check the back door" << endl;
+    cout << "2. Look for another way in" << endl;
+    cout << "Choose: " << endl;
+    int choice;
+    cin >> choice;
+    if (choice == 1)
+    {
+        cout << "It seems that the door is jammed, like there's something pushed up against it." << endl;
+    }
+    else if (choice == 2)
+    {
+        cout << "You find a window that has been broken, it looks like it leads to the basement." << endl;
+    }
+    
+
 }
 
-void choice_go_home() { cout << "TODO: Write something here" << endl; }
+void choice_go_home() 
+{ 
+    cout << "On your way home, you notice a car following you." << endl;
+    cout << "Do you:" << endl;
+    cout << "1. Take a detour through an unfamiliar neighborhood" << endl;
+    cout << "2. Run home as fast as you can" << endl;
+    cout << "Choose: " << endl;
+    int choice;
+    cin >> choice;
+    if (choice == 1)
+    {
+        cout << "Whew! That was a close one! It seems that you have successfully dodged the mysterious vehicle, but which way is home?" << endl;
+    }
+    else if (choice == 2)
+    {
+        cout << "It looks like the car is speeding up! The car looks somewhat familiar.. You've seen it before.. But where?" << endl;
+    }
+    
+}
 
-// any new choices go here
+void choice_secret_path()
+{
+    cout << "You follow a secret path along the side of the house, you see a light off in the distance." << endl;
+    cout << "Do you:" << endl;
+    cout << "1. Follow the light" << endl;
+    cout << "2. Turn around" << endl;
+    cout << "Choose:" << endl;
+    int choice;
+    cin >> choice;
+    if (choice == 1)
+    {
+        cout << "As you approach the light, you notice that it is from a fire at a campsite in the woods. You can see shadow figures sitting around the fire." << endl;
+    } else if (choice == 2)
+    {
+        cout << "You turn around and head back to the house, good choice! Who knows what was waiting in the woods." << endl;
+    }
+    
+}
