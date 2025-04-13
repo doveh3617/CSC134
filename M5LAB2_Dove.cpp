@@ -6,15 +6,13 @@
 #include <iostream>
 using namespace std;
 
-// Declare (Write the prototypes for)
-// the getLength,
-// getWidth, getArea, and displayData
-// functions here.
+double getLength();
+double getWidth();
+double getArea(double length, double width);
+void displayData(double length, double width, double area);
 
 int main()
 {
-	// This program calculates the area of a rectangle.
-	// TODO: fix any syntax errors
 	
    double length,    // The rectangle's length
           width,     // The rectangle's width
@@ -24,10 +22,10 @@ int main()
    length = getLength();
    
    // Get the rectangle's width.
-   width = getWidth()
+   width = getWidth();
    
    // Get the rectangle's area.
-   are = getArea();
+   area = getArea(length, width);
    
    // Display the rectangle's data.
    displayData(length, width, area);
@@ -35,7 +33,32 @@ int main()
    return 0;
 }
 
-//***************************************************
-// TODO: write the getLength, getWidth, getArea,    *
-// and displayData functions below.                 *
-//***********************************************
+double getLength ()
+{
+   double length;
+   cout << "Please enter the length" << endl;
+   cin >> length;
+   return length;
+}
+
+double getWidth ()
+{
+   double width;
+   cout << "Please enter the width" << endl;
+   cin >> width;
+   return width;
+}
+
+double getArea (double length, double width)
+{
+   double area;
+   area = length * width;
+   return area;
+}
+
+void displayData (double length, double width, double area)
+{
+   cout << "The length of the rectangle is " << length << endl;
+   cout << "The width of the rectangle is " << width << endl;
+   cout << "The area of the rectangle is " << area << endl;
+}
