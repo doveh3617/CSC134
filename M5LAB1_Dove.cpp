@@ -1,8 +1,5 @@
-
-
-
 // CSC 134
-//M5LAB1 - Choose Your Own Adventure
+// M5LAB1 - Choose Your Own Adventure
 // Hayley Dove
 // 04/12/2025
 
