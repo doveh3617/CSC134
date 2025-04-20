@@ -6,6 +6,9 @@
 #include <iostream>
 
 using namespace std;
+void circle();
+void rectangle();
+void triangle();
 
 int main()
 {
@@ -94,6 +97,8 @@ int main()
     cout << "2. Calculate the Area of a Rectangle" << endl;
     cout << "3. Calculate the Area of a Triangle" << endl;
     cout << "4. Quit" << endl;
+    cout << "Enter your choice: " << endl;
+    cin >> choice;
 
     if (choice == 1)
     {
@@ -116,6 +121,8 @@ int main()
         cout << "The valid choices are 1 through 4. Run the program again and select one of those." << endl;
     }
 
+    
+
     return 0;
 }
 
@@ -130,7 +137,7 @@ void circle()
         cout << "The radius cannot be less than zero." << endl;
         cin >> radius;
     }
-    double area = 3.14159 * pow(radius, 2);
+    double area = 3.14159 * (radius * radius);
 
     cout << "The area of the circle is " << area << endl;
 }
