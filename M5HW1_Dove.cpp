@@ -6,13 +6,47 @@
 #include <iostream>
 
 using namespace std;
+void question1(); // Average rainfall
+void question2(); // Volume of a block
+void question3(); // Roman numeral converter
+void question4(); // Geometry calculator
+void question5(); // Distance traveled
 void circle();
 void rectangle();
 void triangle();
 
 int main()
 {
-    // Question 1
+    int choice;
+
+    do {
+        cout << "\nMAIN MENU" << endl;
+        cout << "1. Average Rainfall" << endl;
+        cout << "2. Volume of a Block" << endl;
+        cout << "3. Roman Numeral Converter" << endl;
+        cout << "4. Geometry Calculator" << endl;
+        cout << "5. Distance Traveled" << endl;
+        cout << "6. Exit" << endl;
+        cout << "Enter your choice (1-6): " << endl;
+        cin >> choice;
+
+        switch (choice) {
+            case 1: question1(); break;
+            case 2: question2(); break;
+            case 3: question3(); break;
+            case 4: question4(); break;
+            case 5: question5(); break;
+            case 6: cout << "Exiting program. Goodbye!" << endl;
+            default: cout << "Invalid choice. Please enter a number between 1 and 6." << endl;
+        }
+    } while (choice != 6);
+
+    return 0;
+}
+
+// Question 1
+void question1()
+{
     string months[3];
     double rainfall;
     double totalRainfall = 0;
@@ -29,10 +63,13 @@ int main()
     double average = totalRainfall / 3.0;
 
     cout << "The average rainfall for " 
-    << months[0] << ", " << months[1] << ", and " 
-    << months[2] << " is " << average << " inches." << endl;
+    << months[0] << ", " << months[1] << ", and " << months[2] 
+    << " is " << average << " inches." << endl;
+}
 
-    // Question 2
+// Question 2
+void question2()
+{
     double width;
     double length;
     double height;
@@ -62,8 +99,11 @@ int main()
     double volume = length * width * height;
 
     cout << "The volume of the block is " << volume << endl;
+}
 
-    // Question 3
+// Question 3
+void question3()
+{
     int number;
 
     cout << "Enter a number (1 - 10): ";
@@ -88,8 +128,11 @@ int main()
         case 10: cout << "X"; break;
     }
     cout << "." << endl;
+}
 
-    // Question 4
+// Question 4
+void question4()
+{
     int choice;
 
     cout << "Geometry Calculator" << endl;
@@ -120,10 +163,40 @@ int main()
     {
         cout << "The valid choices are 1 through 4. Run the program again and select one of those." << endl;
     }
+}
+
+// Question 5
+void question5()
+{
+    int speed, hours;
+
+    cout << "What is the speed of the vehicle in mph? ";
+    cin >> speed;
+    while (speed < 0)
+    {
+        cout << "Speed cannot be negative. Please enter a valid speed: ";
+        cin >> speed;
+    }
+
+    cout << "How many hours has it traveled? ";
+    cin >> hours;
+    while (hours < 1)
+    {
+        cout << "Time must be at least 1 hour. Please enter a valid time: ";
+        cin >> hours;
+    }
 
     
+    cout << "\nHour\tDistance Traveled" << endl;
+    cout << "-----------------------------" << endl;
 
-    return 0;
+    
+    for (int hour = 1; hour <= hours; hour++)
+    {
+        int distance = speed * hour;
+        cout << hour << "\t" << distance << endl;
+    }
+
 }
 
 void circle()
