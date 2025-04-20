@@ -86,5 +86,101 @@ int main()
     }
     cout << "." << endl;
 
+    // Question 4
+    int choice;
+
+    cout << "Geometry Calculator" << endl;
+    cout << "1. Calculate the Area of a Circle" << endl;
+    cout << "2. Calculate the Area of a Rectangle" << endl;
+    cout << "3. Calculate the Area of a Triangle" << endl;
+    cout << "4. Quit" << endl;
+
+    if (choice == 1)
+    {
+        circle();
+    }
+    else if (choice == 2)
+    {
+        rectangle();
+    }
+    else if (choice == 3)
+    {
+        triangle();
+    }
+    else if (choice == 4)
+    {
+        cout << "Goodbye!" << endl;
+    }
+    else 
+    {
+        cout << "The valid choices are 1 through 4. Run the program again and select one of those." << endl;
+    }
+
     return 0;
+}
+
+void circle()
+{
+    double radius;
+    
+    cout << "What is the radius of the circle? " << endl;
+    cin >> radius;
+    while (radius < 0)
+    {
+        cout << "The radius cannot be less than zero." << endl;
+        cin >> radius;
+    }
+    double area = 3.14159 * pow(radius, 2);
+
+    cout << "The area of the circle is " << area << endl;
+}
+
+void rectangle()
+{
+    double length;
+    double width;
+
+    cout << "What is the length of the rectangle? " << endl;
+    cin >> length;
+    while (length <= 0)
+    {
+        cout << "Only enter positive numbers for length." << endl;
+        cin >> length;
+    }
+    cout << "What is the width of the rectangle? " << endl;
+    cin >> width;
+    while (width <= 0)
+    {
+        cout << "Only enter positive numbers for width." << endl;
+        cin >> width;
+    }
+
+    double area = length * width;
+
+    cout << "The area of the rectangle is " << area << endl;
+}
+
+void triangle()
+{
+    double base;
+    double height;
+
+    cout << "What is the length of the base of the triangle? " << endl;
+    cin >> base;
+    while (base <= 0)
+    {
+        cout << "Only enter positive numbers for base." << endl;
+        cin >> base;
+    }
+    cout << "What is the height of the triangle? " << endl;
+    cin >> height;
+    while (height <= 0)
+    {
+        cout << "Only enter positive numbers for height." << endl;
+        cin >> height;
+    }
+
+    double area = base * height * .5;
+
+    cout << "The area of the triangle is " << area << endl;
 }
