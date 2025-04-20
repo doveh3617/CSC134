@@ -4,6 +4,7 @@
 // 04/19/2025
 
 #include <iostream>
+#include <iomanip>
 
 using namespace std;
 void question1(); // Average rainfall
@@ -61,6 +62,7 @@ void question1()
     }
     
     double average = totalRainfall / 3.0;
+    cout << fixed << setprecision(2);
 
     cout << "The average rainfall for " 
     << months[0] << ", " << months[1] << ", and " << months[2] 
