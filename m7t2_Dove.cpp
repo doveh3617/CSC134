@@ -51,9 +51,19 @@ int main()
 
     cout << "This program will calculate the area of a rectangle." << endl;
     cout << "What is the width? " << endl;
-    cin >> rectWidth;
+    while (!(cin >> rectWidth) || rectWidth <= 0)
+    {
+        cout << "Invalid input. Please enter a positive number for width: " << endl;
+        cin.clear();
+        cin.ignore(1000, '\n');
+    }
     cout << "What is the length?" << endl;
-    cin >> rectLength;
+    while (!(cin >> rectLength) || rectLength <= 0)
+    {
+        cout << "Invalid input. Please enter a positive number for length: " << endl;
+        cin.clear();
+        cin.ignore(1000, '\n');
+    }
 
     box.setWidth(rectWidth);
     box.setLength(rectLength);
